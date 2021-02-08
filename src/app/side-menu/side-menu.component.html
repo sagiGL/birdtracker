@@ -3,9 +3,9 @@
         <img class="app-logo" src="assets/bird.svg">
         <h2 clas="brand">Bird Tracker</h2>
     </div>
-    <div class="menu" #scrollframe (scroll)="onScroll()">
+    <div class="menu" #scrollframe (scroll)="onScroll($event)">
     <div class="bird-option" *ngFor="let bird of birds"
-        (click)="showBirdInfo(bird, $event)"
+        (click)="showBirdInfo(bird)"
         [class.current]="currentBird === bird">
         <div class="option-icon">
             <img class="bird-icon" src="{{bird.image}}" alt="">
